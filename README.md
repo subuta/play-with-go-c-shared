@@ -4,7 +4,7 @@ Testing "buildmode=c-shared"
 ## Prerequisites
 
 - Docker for Mac(Or other Docker client app)
-- Tested with following versions language versions.
+- Tested with following language versions.
   - Node.js: v10.24.1
   - Ruby: v3.0.2
   - PHP: v7.4
