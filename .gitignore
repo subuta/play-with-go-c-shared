@@ -20,4 +20,4 @@ lib/
 node_modules/
 vendor/
 
-*doQuery.h
+*libquery.h

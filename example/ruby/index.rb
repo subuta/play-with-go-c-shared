@@ -3,7 +3,7 @@ require 'ffi'
 module Lib
   extend FFI::Library
 
-  ffi_lib './doQuery.so'
+  ffi_lib './libquery.so'
 
   attach_function :DoQuery, [], :void
 end

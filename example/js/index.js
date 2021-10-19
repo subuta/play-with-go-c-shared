@@ -2,7 +2,7 @@
 var ref = require("ref");
 var ffi = require("ffi");
 
-var lib = ffi.Library("./doQuery.so", {
+var lib = ffi.Library("./libquery.so", {
     DoQuery: ["void", []]
 });
 

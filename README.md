@@ -1,5 +1,6 @@
 # play-with-go-c-shared
-Testing "buildmode=c-shared"
+
+Calling Golang's "buildmode=c-shared" generated shared-library via FFI from various languages.
 
 ## Prerequisites
 
@@ -8,6 +9,8 @@ Testing "buildmode=c-shared"
   - Node.js: v10.24.1
   - Ruby: v3.0.2
   - PHP: v7.4
+  - Python: v3.8.12
+  - Golang: v1.17.2
 
 ## How to run
 
@@ -23,11 +26,17 @@ make lib
 ## JavaScript
 make js
 
+## PHP
+make php
+
+## Python
+make python
+
 ## Ruby
 make ruby
 
-## PHP
-make php
+## Go(Client)
+make go
 ```
 
 ## References

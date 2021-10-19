@@ -1,7 +1,7 @@
 <?php
 
-echo("Greetings from php\n");
+echo("Greetings from PHP\n");
 
-$ffi = FFI::cdef("void DoQuery();", __DIR__ . "/doQuery.so");
+$ffi = FFI::cdef("void DoQuery();", __DIR__ . "/libquery.so");
 
 $ffi->DoQuery();

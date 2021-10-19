@@ -6,6 +6,12 @@ services:
     volumes:
       - $PWD:/usr/src/myapp
 
+  python:
+    image: python:3.8.12-bullseye
+    working_dir: /usr/src/myapp/example/python
+    volumes:
+      - $PWD:/usr/src/myapp
+
   js:
     build:
       context: .
