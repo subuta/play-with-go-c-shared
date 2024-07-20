@@ -2,6 +2,7 @@
 
 so:
 	docker compose run --rm go bash -c "go build -o lib/libquery.so -buildmode=c-shared lib.go;"
+	sudo cp ./swig/* ./lib
 
 cp:
 	cp -r ./lib/* ./example/js
@@ -21,6 +22,9 @@ php:
 	docker compose run --rm php bash -c "php index.php"
 
 python:
+	cd example/python && \
+		swig -python libquery.i && \
+		gcc -fPIC -shared -o _query.so libquery_wrap.c -I/usr/include/python3.10 -L. -lquery
 	docker compose run --rm python bash -c "python index.py"
 
 go:
