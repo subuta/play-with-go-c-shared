@@ -21,3 +21,7 @@ node_modules/
 vendor/
 
 *libquery.h
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/play-with-go-c-shared.iml
+/.idea/vcs.xml
