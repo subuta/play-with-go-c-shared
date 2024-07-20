@@ -39,8 +39,11 @@ query.py
 php_query.h
 query.php
 
-# ---- [end] Generated binding files ----
-
+# JS binding
 /example/js/build
+
+# Ruby binding
 /example/ruby/.sitearchdir.time
 /example/ruby/Makefile
+
+# ---- [end] Generated binding files ----
