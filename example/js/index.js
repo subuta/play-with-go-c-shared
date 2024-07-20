@@ -1,10 +1,5 @@
 // Node.js Example
-var ref = require("ref");
-var ffi = require("ffi");
-
-var lib = ffi.Library("./libquery.so", {
-    DoQuery: ["void", []]
-});
+const query = require("./build/Release/query");
 
 console.log("Greetings from Node.js")
-lib.DoQuery()
+query.DoQuery()

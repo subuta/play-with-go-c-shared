@@ -40,3 +40,5 @@ php_query.h
 query.php
 
 # ---- [end] Generated binding files ----
+
+/example/js/build

@@ -13,6 +13,9 @@ cp:
 lib: so cp
 
 js:
+	cd example/js && \
+    		swig -c++ -javascript -node libquery.i && \
+    		node-gyp clean && node-gyp configure && node-gyp build && \
 	docker compose run --rm js bash -c "node index.js"
 
 ruby:
