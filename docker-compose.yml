@@ -38,3 +38,5 @@ services:
     working_dir: /usr/src/myapp/example/php
     volumes:
       - .:/usr/src/myapp
+    environment:
+      LD_LIBRARY_PATH: "."

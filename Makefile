@@ -19,6 +19,9 @@ ruby:
 	docker compose run --rm ruby bash -c "bundle exec ruby ./index.rb"
 
 php:
+	cd example/php && \
+		swig -php7 libquery.i && \
+		gcc -fpic -shared -o query.so libquery_wrap.c `php-config --includes` -L. -lquery
 	docker compose run --rm php bash -c "php index.php"
 
 python:

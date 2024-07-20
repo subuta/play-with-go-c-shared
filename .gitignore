@@ -25,10 +25,18 @@ vendor/
 libquery*
 !swig/libquery.i
 
-# Generated python binding
-query.py
-
 /.idea/.gitignore
 /.idea/modules.xml
 /.idea/play-with-go-c-shared.iml
 /.idea/vcs.xml
+
+# ---- [start] Generated binding files ----
+
+# Python binding
+query.py
+
+# PHP binding
+php_query.h
+query.php
+
+# ---- [end] Generated binding files ----
