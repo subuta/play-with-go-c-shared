@@ -31,7 +31,8 @@ services:
     working_dir: /usr/src/myapp/example/ruby
     volumes:
       - ./:/usr/src/myapp/
-      - /usr/src/myapp/example/ruby/vendor
+    environment:
+      LD_LIBRARY_PATH: "."
 
   php:
     build:

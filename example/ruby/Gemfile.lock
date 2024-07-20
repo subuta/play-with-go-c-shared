@@ -1,14 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ffi (1.15.4)
 
 PLATFORMS
-  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
-  ffi
 
 BUNDLED WITH
    2.2.22

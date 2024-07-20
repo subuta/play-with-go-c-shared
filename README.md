@@ -6,7 +6,7 @@ Calling Golang's "buildmode=c-shared" generated shared-library via FFI from vari
 
 - Docker for Mac(Or other Docker client app)
 - Tested with following language versions.
-  - Node.js: v10.24.1
+  - Node.js: v10.24.1 / npm 6v.14.12 / node-gyp v5.1.1
   - Ruby: v3.0.2
   - PHP: v7.4
   - Python: v3.8.12

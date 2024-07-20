@@ -42,3 +42,5 @@ query.php
 # ---- [end] Generated binding files ----
 
 /example/js/build
+/example/ruby/.sitearchdir.time
+/example/ruby/Makefile

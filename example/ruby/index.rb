@@ -1,12 +1,4 @@
-require 'ffi'
-
-module Lib
-  extend FFI::Library
-
-  ffi_lib './libquery.so'
-
-  attach_function :DoQuery, [], :void
-end
+require './query'
 
 puts "Greetings from Ruby\n"
-Lib.DoQuery()
+Query.DoQuery()

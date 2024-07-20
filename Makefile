@@ -19,12 +19,16 @@ js:
 	docker compose run --rm js bash -c "node index.js"
 
 ruby:
+	cd example/ruby && \
+        		swig -ruby libquery.i && \
+        		ruby extconf.rb && make && sudo make install && \
+        		gcc -fPIC -shared -o query.so libquery_wrap.c -I/usr/include/ruby-3.0.0 -I/usr/include/x86_64-linux-gnu/ruby-3.0.0 -L. -lquery && \
 	docker compose run --rm ruby bash -c "bundle exec ruby ./index.rb"
 
 php:
 	cd example/php && \
 		swig -php7 libquery.i && \
-		gcc -fpic -shared -o query.so libquery_wrap.c `php-config --includes` -L. -lquery
+		gcc -fPIC -shared -o query.so libquery_wrap.c `php-config --includes` -L. -lquery
 	docker compose run --rm php bash -c "php index.php"
 
 python:
@@ -32,6 +36,3 @@ python:
 		swig -python libquery.i && \
 		gcc -fPIC -shared -o _query.so libquery_wrap.c -I/usr/include/python3.10 -L. -lquery
 	docker compose run --rm python bash -c "python index.py"
-
-go:
-	docker compose run --rm go bash -c "LD_LIBRARY_PATH=./lib go run ./example.go"
